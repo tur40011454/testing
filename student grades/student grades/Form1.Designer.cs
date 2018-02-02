@@ -35,8 +35,6 @@
             this.lblEnglish = new System.Windows.Forms.Label();
             this.lblMaths = new System.Windows.Forms.Label();
             this.lblScience = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.grbEnterMarks = new System.Windows.Forms.GroupBox();
             this.txtStuName = new System.Windows.Forms.TextBox();
             this.txtStuNumb = new System.Windows.Forms.TextBox();
@@ -45,8 +43,19 @@
             this.txtEnglish = new System.Windows.Forms.TextBox();
             this.txtMaths = new System.Windows.Forms.TextBox();
             this.txtScience = new System.Windows.Forms.TextBox();
+            this.grpResults = new System.Windows.Forms.GroupBox();
+            this.lblStuDetails = new System.Windows.Forms.Label();
+            this.lblAvgMark = new System.Windows.Forms.Label();
+            this.lblStuGrade = new System.Windows.Forms.Label();
+            this.txtStuDetails = new System.Windows.Forms.TextBox();
+            this.txtAvgMark = new System.Windows.Forms.TextBox();
+            this.txtStuGrade = new System.Windows.Forms.TextBox();
+            this.btnCalculate = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.grbEnterMarks.SuspendLayout();
             this.grpStuMarks.SuspendLayout();
+            this.grpResults.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -112,24 +121,6 @@
             this.lblScience.TabIndex = 6;
             this.lblScience.Text = "Science";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 331);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "label7";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 356);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 13);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "label8";
-            // 
             // grbEnterMarks
             // 
             this.grbEnterMarks.Controls.Add(this.cboGroup);
@@ -175,7 +166,7 @@
             this.grpStuMarks.Controls.Add(this.lblEnglish);
             this.grpStuMarks.Controls.Add(this.lblMaths);
             this.grpStuMarks.Controls.Add(this.lblScience);
-            this.grpStuMarks.Location = new System.Drawing.Point(12, 150);
+            this.grpStuMarks.Location = new System.Drawing.Point(12, 149);
             this.grpStuMarks.Name = "grpStuMarks";
             this.grpStuMarks.Size = new System.Drawing.Size(522, 108);
             this.grpStuMarks.TabIndex = 10;
@@ -203,15 +194,107 @@
             this.txtScience.Size = new System.Drawing.Size(100, 20);
             this.txtScience.TabIndex = 9;
             // 
+            // grpResults
+            // 
+            this.grpResults.Controls.Add(this.btnExit);
+            this.grpResults.Controls.Add(this.btnClear);
+            this.grpResults.Controls.Add(this.btnCalculate);
+            this.grpResults.Controls.Add(this.txtStuGrade);
+            this.grpResults.Controls.Add(this.txtAvgMark);
+            this.grpResults.Controls.Add(this.txtStuDetails);
+            this.grpResults.Controls.Add(this.lblStuGrade);
+            this.grpResults.Controls.Add(this.lblAvgMark);
+            this.grpResults.Controls.Add(this.lblStuDetails);
+            this.grpResults.Location = new System.Drawing.Point(12, 263);
+            this.grpResults.Name = "grpResults";
+            this.grpResults.Size = new System.Drawing.Size(522, 121);
+            this.grpResults.TabIndex = 11;
+            this.grpResults.TabStop = false;
+            this.grpResults.Text = "Results";
+            // 
+            // lblStuDetails
+            // 
+            this.lblStuDetails.AutoSize = true;
+            this.lblStuDetails.Location = new System.Drawing.Point(1, 20);
+            this.lblStuDetails.Name = "lblStuDetails";
+            this.lblStuDetails.Size = new System.Drawing.Size(79, 13);
+            this.lblStuDetails.TabIndex = 0;
+            this.lblStuDetails.Text = "Student Details";
+            // 
+            // lblAvgMark
+            // 
+            this.lblAvgMark.AutoSize = true;
+            this.lblAvgMark.Location = new System.Drawing.Point(1, 44);
+            this.lblAvgMark.Name = "lblAvgMark";
+            this.lblAvgMark.Size = new System.Drawing.Size(74, 13);
+            this.lblAvgMark.TabIndex = 1;
+            this.lblAvgMark.Text = "Average Mark";
+            // 
+            // lblStuGrade
+            // 
+            this.lblStuGrade.AutoSize = true;
+            this.lblStuGrade.Location = new System.Drawing.Point(1, 70);
+            this.lblStuGrade.Name = "lblStuGrade";
+            this.lblStuGrade.Size = new System.Drawing.Size(76, 13);
+            this.lblStuGrade.TabIndex = 2;
+            this.lblStuGrade.Text = "Student Grade";
+            // 
+            // txtStuDetails
+            // 
+            this.txtStuDetails.Location = new System.Drawing.Point(86, 20);
+            this.txtStuDetails.Name = "txtStuDetails";
+            this.txtStuDetails.Size = new System.Drawing.Size(212, 20);
+            this.txtStuDetails.TabIndex = 3;
+            // 
+            // txtAvgMark
+            // 
+            this.txtAvgMark.Location = new System.Drawing.Point(86, 44);
+            this.txtAvgMark.Name = "txtAvgMark";
+            this.txtAvgMark.Size = new System.Drawing.Size(110, 20);
+            this.txtAvgMark.TabIndex = 4;
+            // 
+            // txtStuGrade
+            // 
+            this.txtStuGrade.Location = new System.Drawing.Point(86, 70);
+            this.txtStuGrade.Name = "txtStuGrade";
+            this.txtStuGrade.Size = new System.Drawing.Size(212, 20);
+            this.txtStuGrade.TabIndex = 5;
+            // 
+            // btnCalculate
+            // 
+            this.btnCalculate.Location = new System.Drawing.Point(428, 20);
+            this.btnCalculate.Name = "btnCalculate";
+            this.btnCalculate.Size = new System.Drawing.Size(75, 23);
+            this.btnCalculate.TabIndex = 6;
+            this.btnCalculate.Text = "Calculate";
+            this.btnCalculate.UseVisualStyleBackColor = true;
+            // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(428, 44);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(75, 23);
+            this.btnClear.TabIndex = 7;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(428, 70);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.TabIndex = 8;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            // 
             // frmStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(538, 398);
+            this.ClientSize = new System.Drawing.Size(540, 389);
+            this.Controls.Add(this.grpResults);
             this.Controls.Add(this.grpStuMarks);
             this.Controls.Add(this.grbEnterMarks);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.lblTitle);
             this.Name = "frmStudent";
             this.Text = "Student Grades";
@@ -219,6 +302,8 @@
             this.grbEnterMarks.PerformLayout();
             this.grpStuMarks.ResumeLayout(false);
             this.grpStuMarks.PerformLayout();
+            this.grpResults.ResumeLayout(false);
+            this.grpResults.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,8 +318,6 @@
         private System.Windows.Forms.Label lblEnglish;
         private System.Windows.Forms.Label lblMaths;
         private System.Windows.Forms.Label lblScience;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox grbEnterMarks;
         private System.Windows.Forms.TextBox txtStuName;
         private System.Windows.Forms.ComboBox cboGroup;
@@ -243,6 +326,16 @@
         private System.Windows.Forms.TextBox txtScience;
         private System.Windows.Forms.TextBox txtMaths;
         private System.Windows.Forms.TextBox txtEnglish;
+        private System.Windows.Forms.GroupBox grpResults;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnCalculate;
+        private System.Windows.Forms.TextBox txtStuGrade;
+        private System.Windows.Forms.TextBox txtAvgMark;
+        private System.Windows.Forms.TextBox txtStuDetails;
+        private System.Windows.Forms.Label lblStuGrade;
+        private System.Windows.Forms.Label lblAvgMark;
+        private System.Windows.Forms.Label lblStuDetails;
     }
 }
 
